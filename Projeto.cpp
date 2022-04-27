@@ -53,7 +53,7 @@ m:
 		cout << "\t\t\t Password\n";
 		cin >> password;
 
-		if (email == "garibalde3c2001@gmail.com" && password == "gjariel1")
+		if (email == "admin" && password == "admin")
 		{
 			administrator();
 		}
@@ -77,7 +77,7 @@ m:
 
 	default:
 	{
-		cout << "Por favor selecione alguma opção";
+		cout << "Por favor selecione alguma opï¿½ï¿½o";
 	}
 	}
 	goto m;
@@ -174,7 +174,7 @@ m:
 	cin >> pcode;
 	cout << "\n\n\t Nome do Produto ";
 	cin >> pname;
-	cout << "\n\n\t Preço do produto";
+	cout << "\n\n\t Preï¿½o do produto";
 	cin >> price;
 	cout << "\n\n\t Disconto do produto";
 	cin >> dis;
@@ -233,7 +233,7 @@ void shopping::edit()
 	data.open("database.txt", ios::in);
 	if (!data)
 	{
-		cout << "\n\nArquivo não existe! ";
+		cout << "\n\nArquivo nï¿½o existe! ";
 	}
 	else {
 
@@ -248,7 +248,7 @@ void shopping::edit()
 				cin >> c;
 				cout << "\n\t\t Nome do produto: ";
 				cin >> n;
-				cout << "\n\t\t Preço do produto: ";
+				cout << "\n\t\t Preï¿½o do produto: ";
 				cin >> p;
 				cout << "\n\t\t Desconto :";
 				cin >> d;
@@ -271,7 +271,7 @@ void shopping::edit()
 
 		if (token == 0)
 		{
-			cout << "\n\n Registro não existe! ";
+			cout << "\n\n Registro nï¿½o existe! ";
 		}
 	}
 
@@ -288,7 +288,7 @@ void shopping::rem()
 	data.open("database.txt", ios::in);
 	if (!data)
 	{
-		cout << "Arquivo não existe";
+		cout << "Arquivo nï¿½o existe";
 
 	}
 	else
@@ -316,7 +316,7 @@ void shopping::rem()
 
 		if (token == 0)
 		{
-			cout << "\n\n Registro não econtrado";
+			cout << "\n\n Registro nï¿½o econtrado";
 		}
 	}
 }
@@ -326,7 +326,7 @@ void shopping::list()
 	fstream data;
 	data.open("database.txt", ios::in);
 	cout << "\n\n|______________________________________________________\n";
-	cout << "ProNo\t\tNome\t\tPreço\n";
+	cout << "ProNo\t\tNome\t\tPreï¿½o\n";
 	cout << "\n\n|______________________________________________________\n";
 	data >> pcode >> pname >> price >> dis;
 	while (!data.eof())
@@ -365,7 +365,7 @@ void shopping::receipt()
 		list();
 		cout << "\n__________________________________\n";
 		cout << "\n                                  \n";
-		cout << "\n           Faça o Pedido          \n";
+		cout << "\n           Faï¿½a o Pedido          \n";
 		cout << "\n                                  \n";
 		cout << "\n__________________________________\n";
 		do
@@ -385,12 +385,12 @@ void shopping::receipt()
 				}
 			}
 			c++;
-			cout << "\n\n Deseja comprar outro produto? [Sim]=y [Não]=n";
+			cout << "\n\n Deseja comprar outro produto? [Sim]=y [Nï¿½o]=n";
 			cin >> choice;
 		} while (choice == 'y');
 
 		cout << "\n\n\t\t\t________________Recebido________________\n";
-		cout << "\nNumero\t Nome\t Quantidade\t Preço\t Montante\t Montante com desconto\n";
+		cout << "\nNumero\t Nome\t Quantidade\t Preï¿½o\t Montante\t Montante com desconto\n";
 
 		for (int i = 0; i < c; i++)
 		{
