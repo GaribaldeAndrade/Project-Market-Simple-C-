@@ -44,6 +44,8 @@ m:
 	cout << "\n\t\t\t Por Favor Selecione!";
 	cin >> choice;
 
+    system("cls");
+
 	switch (choice)
 	{
 	case 1:
@@ -53,6 +55,8 @@ m:
 		cin >> email;
 		cout << "\t\t\t Password\n";
 		cin >> password;
+
+	system("cls");
 
 		if (email == "admin" && password == "admin")
 		{
@@ -102,6 +106,8 @@ m:
 
 	cout << "\n\n\t Por favor adicione sua escolha ";
 	cin >> choice;
+  
+    system("cls");
 
 	switch (choice)
 	{
@@ -143,6 +149,8 @@ m:
 
 	cin >> choice;
 
+	system("cls");
+
 	switch (choice)
 	{
 	case 1:
@@ -182,6 +190,8 @@ m:
 	cin >> price;
 	cout << "\n\n\t Disconto do produto";
 	cin >> dis;
+
+	system("cls");
 
 	data.open("database.txt", ios::in);
 
@@ -235,6 +245,8 @@ void shopping::edit()
 	cout << "\n\t\t\t Codigo do Produto: ";
 	cin >> pkey;
 
+	system("cls");
+
 	data.open("database.txt", ios::in);
 	if (!data)
 	{
@@ -257,6 +269,9 @@ void shopping::edit()
 				cin >> p;
 				cout << "\n\t\t Desconto :";
 				cin >> d;
+
+				system("cls");
+
 				data1 << " " << c << " " << n << " " << p << " " << d << "\n";
 				cout << "\n\n\t\t Registro Editado ";
 				token++;
@@ -290,6 +305,9 @@ void shopping::rem()
 	cout << "\n\n\t Delete produto";
 	cout << "\n\n\t Codigo do produto: ";
 	cin >> pkey;
+
+	system("cls");
+
 	data.open("database.txt", ios::in);
 	if (!data)
 	{
@@ -392,6 +410,8 @@ void shopping::receipt()
 			cin >> choice;
 		} while (choice == 'y');
 
+		system("cls");
+		
 		cout << "\n\n\t\t\t________________Recebido________________\n";
 		cout << "\nNumero\t Nome\t Quantidade\t Preco\t Montante\t Montante com desconto\n";
 
