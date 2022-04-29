@@ -133,7 +133,7 @@ void shopping::buyer()
 {
 m:
 	int choice;
-	cout << "\t\t\t 1) Cliente \n";
+	cout << "\t\t\t 1) Tela Cliente \n";
 	cout << "\t\t\t_________________  \n";
 	cout << "                         \n";
 	cout << "\t\t\t1) Comprar Produto \n";
@@ -324,7 +324,7 @@ void shopping::rem()
 	}
 }
 
-
+//Mostra os produtos existentes no database
 void shopping::list()
 {
 	fstream data;
@@ -341,6 +341,7 @@ void shopping::list()
 	data.close();
 }
 
+//Aba de compra de produtos
 void shopping::receipt()
 {
 	fstream data;
