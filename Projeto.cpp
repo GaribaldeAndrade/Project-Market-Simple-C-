@@ -385,16 +385,14 @@ void shopping::receipt()
 
 		list();
 		cout << "\n__________________________________\n";
-		cout << "\n                                  \n";
 		cout << "\n           Faca o Pedido          \n";
-		cout << "\n                                  \n";
 		cout << "\n__________________________________\n";
 		do
 		{
 		m:
-			cout << "\n\n Adicione o coigo do produto: ";
+			cout << "\n Adicione o coigo do produto: ";
 			cin >> arrc[c];
-			cout << "\n\n Adicione a quantidade: ";
+			cout << " Adicione a quantidade: ";
 			cin >> arrq[c];
 			for (int i = 0; i < c; i++)
 			{
@@ -406,7 +404,7 @@ void shopping::receipt()
 				}
 			}
 			c++;
-			cout << "\n\n Deseja comprar outro produto? [Sim]=y [Nao]=n";
+			cout << "\n Deseja comprar outro produto? [Sim]=y [Nao]=n";
 			cin >> choice;
 		} while (choice == 'y');
 
