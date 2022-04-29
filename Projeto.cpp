@@ -2,15 +2,15 @@
 #include<fstream>
 using namespace std;
 
-class shopping
+class shopping //criação classe
 {
-private:
+private: //variaveis da classe
 	int pcode;
 	float price;
 	float dis;
 	string pname;
 
-public:
+public: //funçoes
 	void menu();
 	void administrator();
 	void buyer();
@@ -51,9 +51,9 @@ m:
 	case 1:
 	//Login e senha que entra no administrador
 		cout << "\t\t\t Login \n";
-		cout << "\t\t\t Email \n";
+		cout << "\t\t\t Email:\t";
 		cin >> email;
-		cout << "\t\t\t Password\n";
+		cout << "\t\t\t Password:\t";
 		cin >> password;
 
 	system("cls");
@@ -139,8 +139,8 @@ void shopping::buyer()
 {
 m:
 	int choice;
-	cout << "\t\t\t 1) Tela Cliente \n";
-	cout << "\t\t\t_________________  \n";
+	cout << "\t\t\t  Tela Cliente \n";
+	cout << "\t\t\t-----------------  \n";
 	cout << "                         \n";
 	cout << "\t\t\t1) Comprar Produto \n";
 	cout << "                         \n";
