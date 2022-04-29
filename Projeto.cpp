@@ -29,6 +29,7 @@ m:
 	string email;
 	string password;
 
+//Tela Inicial
 	cout << "\t\t\t\t_________________________________\n";
 	cout << "\t\t\t\t                                 \n";
 	cout << "\t\t\t\t      SuperMarket Main Menu      \n";
@@ -47,6 +48,7 @@ m:
 	switch (choice)
 	{
 	case 1:
+	//Login e senha que entra no administrador
 		cout << "\t\t\t Login \n";
 		cout << "\t\t\t Email \n";
 		cin >> email;
@@ -66,25 +68,27 @@ m:
 
 	case 2:
 	{
+		//Manda para a tela do cliente
 		buyer();
 
 	}
 
 	case 3:
 	{
+		//Sair do programa
 		exit(0);
 	}
 
 	default:
 	{
-		cout << "Por favor selecione alguma op��o";
+		cout << "Por favor selecione alguma opcao";
 	}
 	}
 	goto m;
 }
 
 
-
+//Tela do Administrador
 void shopping::administrator()
 {
 m:
@@ -126,6 +130,7 @@ m:
 	goto m;
 }
 
+//TELA DO CLIENTE
 void shopping::buyer()
 {
 m:
@@ -159,6 +164,7 @@ m:
 
 }
 
+//TELA ADICIONAR PRODUTO NO MENU ADMIN
 void shopping::add()
 {
 m:
@@ -174,7 +180,7 @@ m:
 	cin >> pcode;
 	cout << "\n\n\t Nome do Produto ";
 	cin >> pname;
-	cout << "\n\n\t Pre�o do produto";
+	cout << "\n\n\t Preco do produto";
 	cin >> price;
 	cout << "\n\n\t Disconto do produto";
 	cin >> dis;
@@ -216,6 +222,7 @@ m:
 	cout << "\n\n\t\t Registro Invalido";
 }
 
+//TELA DE EDITAR PRODUTO NO ADMIN
 void shopping::edit()
 {
 	fstream data, data1;
@@ -233,7 +240,7 @@ void shopping::edit()
 	data.open("database.txt", ios::in);
 	if (!data)
 	{
-		cout << "\n\nArquivo n�o existe! ";
+		cout << "\n\nArquivo nao existe! ";
 	}
 	else {
 
@@ -248,7 +255,7 @@ void shopping::edit()
 				cin >> c;
 				cout << "\n\t\t Nome do produto: ";
 				cin >> n;
-				cout << "\n\t\t Pre�o do produto: ";
+				cout << "\n\t\t Preco do produto: ";
 				cin >> p;
 				cout << "\n\t\t Desconto :";
 				cin >> d;
@@ -271,11 +278,13 @@ void shopping::edit()
 
 		if (token == 0)
 		{
-			cout << "\n\n Registro n�o existe! ";
+			cout << "\n\n Registro nao existe! ";
 		}
 	}
 
 }
+
+//TELA DE REMOVER PRODUTO NO ADMIN
 void shopping::rem()
 {
 
@@ -288,7 +297,7 @@ void shopping::rem()
 	data.open("database.txt", ios::in);
 	if (!data)
 	{
-		cout << "Arquivo n�o existe";
+		cout << "Arquivo nao existe";
 
 	}
 	else
@@ -316,17 +325,18 @@ void shopping::rem()
 
 		if (token == 0)
 		{
-			cout << "\n\n Registro n�o econtrado";
+			cout << "\n\n Registro nao econtrado";
 		}
 	}
 }
+
 
 void shopping::list()
 {
 	fstream data;
 	data.open("database.txt", ios::in);
 	cout << "\n\n|______________________________________________________\n";
-	cout << "ProNo\t\tNome\t\tPre�o\n";
+	cout << "ProNo\t\tNome\t\tPreco\n";
 	cout << "\n\n|______________________________________________________\n";
 	data >> pcode >> pname >> price >> dis;
 	while (!data.eof())
@@ -365,7 +375,7 @@ void shopping::receipt()
 		list();
 		cout << "\n__________________________________\n";
 		cout << "\n                                  \n";
-		cout << "\n           Fa�a o Pedido          \n";
+		cout << "\n           Faca o Pedido          \n";
 		cout << "\n                                  \n";
 		cout << "\n__________________________________\n";
 		do
@@ -385,12 +395,12 @@ void shopping::receipt()
 				}
 			}
 			c++;
-			cout << "\n\n Deseja comprar outro produto? [Sim]=y [N�o]=n";
+			cout << "\n\n Deseja comprar outro produto? [Sim]=y [Nao]=n";
 			cin >> choice;
 		} while (choice == 'y');
 
 		cout << "\n\n\t\t\t________________Recebido________________\n";
-		cout << "\nNumero\t Nome\t Quantidade\t Pre�o\t Montante\t Montante com desconto\n";
+		cout << "\nNumero\t Nome\t Quantidade\t Preco\t Montante\t Montante com desconto\n";
 
 		for (int i = 0; i < c; i++)
 		{
