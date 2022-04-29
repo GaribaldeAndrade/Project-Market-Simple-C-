@@ -19,7 +19,6 @@ public:
 	void rem();
 	void list();
 	void receipt();
-
 };
 
 void shopping::menu()
@@ -70,7 +69,6 @@ m:
 	{
 		//Manda para a tela do cliente
 		buyer();
-
 	}
 
 	case 3:
@@ -153,11 +151,11 @@ m:
 
 	case 2:
 		menu();
+		break;
 
 	default:
 
 		cout << "Escolha invalida";
-
 	}
 
 	goto m;
@@ -281,13 +279,11 @@ void shopping::edit()
 			cout << "\n\n Registro nao existe! ";
 		}
 	}
-
 }
 
 //TELA DE REMOVER PRODUTO NO ADMIN
 void shopping::rem()
 {
-
 	fstream data, data1;
 	int pkey;
 	int token = 0;
@@ -298,7 +294,6 @@ void shopping::rem()
 	if (!data)
 	{
 		cout << "Arquivo nao existe";
-
 	}
 	else
 	{
@@ -314,7 +309,6 @@ void shopping::rem()
 			else
 			{
 				data1 << " " << pcode << " " << pname << " " << price << " " << dis << "\n";
-
 			}
 			data >> pcode >> pname >> price >> dis;
 		}
@@ -343,10 +337,8 @@ void shopping::list()
 	{
 		cout << pcode << "\t\t" << pname << "\t\t" << price << "\n";
 		data >> pcode >> pname >> price >> dis;
-
 	}
 	data.close();
-
 }
 
 void shopping::receipt()
@@ -417,13 +409,11 @@ void shopping::receipt()
 				}
 				data >> pcode >> pname >> price >> dis;
 			}
-
 		}
 		data.close();
 	}
 	cout << "\n\n________________________________________________";
 	cout << "\n Total do Montante: " << total;
-
 }
 int main()
 {
