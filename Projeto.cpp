@@ -89,7 +89,6 @@ m:
 	goto m;
 }
 
-
 //Tela do Administrador
 void shopping::administrator()
 {
@@ -434,6 +433,7 @@ void shopping::receipt()
 	cout << "\n\n________________________________________________";
 	cout << "\n Total do Montante: " << total;
 }
+
 int main()
 {
 	shopping s;
